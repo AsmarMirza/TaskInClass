@@ -1,15 +1,13 @@
-
-import React from 'react';
-import { Formik, Field, Form, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
-import "./form.css"
-function AddProducts() {
-
- 
-
+import React from 'react'
+import { useParams } from 'react-router-dom';
+import { useState } from 'react';
+const EditProducts = () => {
+    let { id } = useParams();
+    const [myInput, setMyInput] = useState("")
+    console.log(id)
   return (
     <div>
-       <Formik
+               <Formik
        initialValues={{ name: '', description: '' }}
        validationSchema={Yup.object({
          name: Yup.string()
@@ -20,8 +18,9 @@ function AddProducts() {
            .required('Required')
      
        })}
-       onSubmit={(values) => {  
-         fetch("https://northwind.vercel.app/api/categories",{
+       onSubmit={(values) => { 
+           async function getProductById() {
+         fetch("https://northwind.vercel.app/api/categories/",{
           headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
@@ -29,7 +28,7 @@ function AddProducts() {
           method: "POST",
           body: JSON.stringify(values)
       })     
-        
+    }
       }}
      >
        <Form className='form'>
@@ -50,4 +49,4 @@ function AddProducts() {
   )
 }
 
-export default AddProducts
+export default EditProducts

@@ -9,6 +9,7 @@ import MainSite from "./pages/Admin/mainSite";
 import Contact from "./pages/main/Contact";
 import Products from "./pages/main/products";
 import Product from "./pages/Admin/product";
+import EditProducts from "./pages/Admin/EditProducts";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/adminLayout/products" element={<Product />} />
             <Route path="/adminLayout/mainSite" element={<MainSite />} />
             <Route path="/adminLayout/addProducts" element={<AddProducts />} />
+            <Route path="/adminLayout/editProducts/:id" element={<EditProducts />} />
           </Route>
         </Routes>
       </BrowserRouter>

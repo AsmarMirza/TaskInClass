@@ -4,7 +4,7 @@ import "./products.css"
 function Products() {
     const [products, setProducts] = useState([])
     async function getAllProducts(){
-        const res=await fetch ("http://localhost:3000/products")
+        const res=await fetch ("https://northwind.vercel.app/api/categories")
         const data=await res.json()
         setProducts(data)
             }
@@ -20,9 +20,9 @@ function Products() {
       {products.map((x)=>(
         <div key={x.id} className='mainProductsBox'><h5>{x.name}</h5>
         <p>{x.description}</p>
-        <div className='imgDiv'>
+        {/* <div className='imgDiv'>
         <img className='img' src={x.img} alt="" />
-        </div>
+        </div> */}
         </div>
       ))}
       </div>
