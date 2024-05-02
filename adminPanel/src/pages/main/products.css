@@ -1,0 +1,16 @@
+.mainProducts{
+    display: flex;
+    flex-wrap: wrap;
+}
+.mainProductsBox{
+    border: 1px solid black;
+    width: 300px;
+    background-color: green;
+    color: white;
+}
+.imgDiv{
+    max-width: 300px;
+}
+.img{
+    width: 100%;
+}

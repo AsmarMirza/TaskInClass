@@ -1,0 +1,8 @@
+.adminBox{
+    gap: 20px;
+   display: flex;
+   justify-content: space-around;
+  background-color: red; 
+  height: 40px;
+  align-items: center;
+}

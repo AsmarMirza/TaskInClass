@@ -1,0 +1,23 @@
+.productContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+.productBox{
+    border: 1px solid black;
+    width: 300px;
+    background-color: red;
+   
+}
+.adminDivImg{
+    max-width: 300px;
+}
+.adminImg{
+    width: 100%;
+}
+table, th, td {
+    border:1px solid black;
+  
+  }
+  .td{
+    max-width: 50px;
+  }
